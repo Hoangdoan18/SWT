@@ -48,7 +48,8 @@ public class UserCRUDServlet extends HttpServlet {
             page = Integer.parseInt(spage);
         }
 
-        int start, end;
+        int start;
+        int end;
         start = (page - 1) * numperPage;
         end = Math.min(size, page * numperPage);
         List<User> arr = dao.getUsersByPage(list, start, end);
