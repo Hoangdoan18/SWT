@@ -33,6 +33,7 @@ public class AdminFilter implements Filter {
     private FilterConfig filterConfig = null;
 
     public AdminFilter() {
+        //Setup AdminFIlter()
     }
 
     private void doBeforeProcessing(ServletRequest request, ServletResponse response)
@@ -75,9 +76,7 @@ public class AdminFilter implements Filter {
         // request object after the request has been processed. 
         /*
 	for (Enumeration en = request.getAttributeNames(); en.hasMoreElements(); ) {
-	    String name = (String)en.nextElement();
-	    Object value = request.getAttribute(name);
-	    log("attribute: " + name + "=" + value.toString());
+	    
 
 	}
          */
@@ -116,7 +115,7 @@ public class AdminFilter implements Filter {
             if (session.getAttribute("admin") == null && (url.endsWith("AdminDashboard.jsp") || url.contains("UserEdit") || url.contains("UserCRUD") || url.contains("UserDelete"))) {
                 if (session.getAttribute("account") == null) {
                     res.sendRedirect("login.jsp");
-                } else if (session.getAttribute("account") != null) {
+                } else {
                     res.sendRedirect("index.jsp");
                 }
             } else if((session.getAttribute("admin") != null || session.getAttribute("account") != null) && url.contains("login")){
@@ -169,6 +168,7 @@ public class AdminFilter implements Filter {
      * Destroy method for this filter
      */
     public void destroy() {
+        //Nothing Destroy
     }
 
     /**
