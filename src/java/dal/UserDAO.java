@@ -58,15 +58,7 @@ public class UserDAO {
         } catch (Exception e) {
         }
     }
-//    public User getAcc(String uname) {
-//
-//        for (User a : getUsers()) {
-//            if (a.getUsername().equals(uname)) {
-//                return a;
-//            }
-//        }
-//        return null;
-//    }
+
 
     public List<User> getUsersByPage(List<User> list, int start, int end) {
         List<User> t = new ArrayList<>();
@@ -177,19 +169,6 @@ public class UserDAO {
         } catch (Exception e) {
         }
     }
-//    public static void main(String[] args) {
-//        UserDAO dao = new UserDAO();
-//        dao.getAcc("admin");
-//        dao.update("bao1","123","bao@gmail.com","bao",21,123456789,"bao");
-//
-//        dao.addUser("username","123", "email", "name", 1, 123);
-//        dao.addUser("1","123", "email", "name", 1, 123);
-//        dao.edit("quangdx", "quang", "quangdx@gmail.com", "Đỗ Xuân Quang", 20, 1234567890, "1");
-//       dao.delete("username");
-//        List<Users> listA = dao.getUsers();
-//        for (User o : listA) {
-//            System.out.println(o);
-//       }
-//    }
+
 }
 

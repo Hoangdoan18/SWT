@@ -1,0 +1,6 @@
+projectKey=SWT301_Lab3_Group3_SE1506
+serverUrl=http://localhost:9000
+serverVersion=9.1.0.47736
+dashboardUrl=http://localhost:9000/dashboard?id=SWT301_Lab3_Group3_SE1506
+ceTaskId=AXyNU6Il5CsQv5KpdClC
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXyNU6Il5CsQv5KpdClC

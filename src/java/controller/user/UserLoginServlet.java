@@ -95,7 +95,6 @@ public class UserLoginServlet extends HttpServlet {
         User a = dao.login(username, password);
         if (a == null) {
             request.setAttribute("mess", "Wrong username or password!");
-            //response.sendRedirect("Login.jsp");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         } else {
             HttpSession session = request.getSession();

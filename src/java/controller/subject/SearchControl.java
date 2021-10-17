@@ -51,9 +51,8 @@ public class SearchControl extends HttpServlet {
             page = Integer.parseInt(spage);
         }
 
-        int start, end;
-        start = (page - 1) * numperPage;
-        end = Math.min(size, page * numperPage);
+        int start = (page - 1) * numperPage;
+        int end = Math.min(size, page * numperPage);
         List<Subject> arr = sdao.getSubjectByPage(listS, start, end);  
         List<Category> ListC = sdao.getCategory();
         
